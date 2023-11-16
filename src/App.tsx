@@ -9,6 +9,19 @@ const trackUrls = [
   'https://p.scdn.co/mp3-preview/ac28d1b0be285ed3bfd8e9fa5fad133776d7cf36',
 ];
 
+let trackIndex = 0;
+
+const goToNextTrack = () => {
+  trackIndex += 1;
+}
+
+import { useState } from 'react';
+
+const [trackIndex, setTrackIndex] = useState(0);
+
+const goToNextTrack = () => {
+  setTrackIndex(trackIndex + 1);
+}
 
 const App = () => {
   
@@ -19,7 +32,10 @@ const App = () => {
         <h1 className="App-title">Bienvenue sur le blind test</h1>
       </header>
       <div className="App-images">
-      <audio src={trackUrls[2]} autoPlay controls />
+      <audio src={trackUrls[trackIndex]} autoPlay controls />
+<button onClick={goToNextTrack}>
+    Next track
+</button>
         <p>Cyprien</p>
       </div>
       <div className="App-buttons"></div>
