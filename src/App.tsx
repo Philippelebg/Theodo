@@ -8,9 +8,10 @@ const trackUrls = [
   'https://p.scdn.co/mp3-preview/0f6b8a3524ec410020457da4cdd7717f9addce2f',
   'https://p.scdn.co/mp3-preview/ac28d1b0be285ed3bfd8e9fa5fad133776d7cf36',
 ];
-<audio src={trackUrls[0]} autoPlay controls />
+
 
 const App = () => {
+  <audio src={trackUrls[0]} autoPlay controls />
   return (
     <div className="App">
       <header className="App-header">
