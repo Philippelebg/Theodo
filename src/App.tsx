@@ -11,7 +11,7 @@ const trackUrls = [
 
 
 const App = () => {
-  <audio src={trackUrls[0]} autoPlay controls />
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +19,8 @@ const App = () => {
         <h1 className="App-title">Bienvenue sur le blind test</h1>
       </header>
       <div className="App-images">
-        <p>Cy</p>
+      <audio src={trackUrls[2]} autoPlay controls />
+        <p>Cyprien</p>
       </div>
       <div className="App-buttons"></div>
     </div>
