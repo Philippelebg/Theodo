@@ -1,5 +1,6 @@
 import logo from './assets/logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 const trackUrls = [
   'https://p.scdn.co/mp3-preview/742294f35af9390e799dd96c633788410a332e52',
@@ -9,18 +10,17 @@ const trackUrls = [
   'https://p.scdn.co/mp3-preview/ac28d1b0be285ed3bfd8e9fa5fad133776d7cf36',
 ];
 
-const [trackIndex, setTrackIndex] = useState(0);
-
-const goToNextTrack = () => {
-  trackIndex += 1;
-}
-
-import { useState } from 'react';
-
-const [trackIndex, setTrackIndex] = useState(0);
 
 
-const App = () => { 
+
+
+
+
+const App = () => { const [trackIndex, setTrackIndex] = useState(0);
+
+  const goToNextTrack = () => {
+    setTrackIndex  (trackIndex + 1);
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -32,7 +32,7 @@ const App = () => {
 <button onClick={goToNextTrack}>
     Next track
 </button>
-        <p>trackUrls.length</p>
+        <p>trackUrls</p>
       </div>
       <div className="App-buttons"></div>
     </div>
